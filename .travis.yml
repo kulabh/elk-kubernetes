@@ -15,5 +15,5 @@ script:
   - docker login -u ${DOCKER_USERNAME} -p ${DOCKER_PASSWORD}
   - cd ./docker/elasticsearch/
   - docker buildx build --platform linux/amd64,linux/arm64 -t abhishek138/elasticsearch:latest -t abhishek138/elasticsearch:latest --push .;
-  #- cd ../elasticsearch_5x
-  #- docker buildx build --platform linux/amd64,linux/arm64 -t abhishek138/elasticsearch_5x:latest -t abhishek138/elasticsearch_5x:latest --push .;
+  - cd ../elasticsearch_5x
+  - docker buildx build --platform linux/amd64,linux/arm64 -t abhishek138/elasticsearch_5x:latest -t abhishek138/elasticsearch_5x:latest --push .;
